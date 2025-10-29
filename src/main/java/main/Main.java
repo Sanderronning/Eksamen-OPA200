@@ -13,8 +13,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // Laster login.fxml fra resources/view
-        	System.out.println("Prøver å laste: " + getClass().getResource("/view/login.fxml"));
-        	Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
 
 
             primaryStage.setTitle("University Login");
