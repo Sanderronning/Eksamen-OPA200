@@ -20,8 +20,6 @@ public class subjectView {
 	public subjectView(Stage stage) {
 		this.stage = stage;
 		
-		//Sample data
-		subjects.addAll("Mathematics", "Physics", "Chemistry", "Biology", "History");
 	}
 	
 	public void show() {
@@ -51,11 +49,26 @@ public class subjectView {
 	    	}
 	    });
 	    
+	    // Delete Subject button
+	    Button deleteButton = new Button("Delete Selected Subject");
+	    deleteButton.setOnAction(e -> {
+	    	String selectedSubject = subjectListView.getSelectionModel().getSelectedItem();
+	    	if (selectedSubject != null) {
+	    		boolean confirmed = showConfirmation("Are you sure you want to delete the subject: " + selectedSubject + "?");
+	    		if (confirmed) {
+	    			subjects.remove(selectedSubject);
+	    		}
+	    	}
+	    	});
 	    
+	    // Disable delete button if no subject is selected
+	    deleteButton.disableProperty().bind(subjectListView.getSelectionModel().selectedItemProperty().isNull());
+
 	    // Input box for adding new subjects
-	    HBox inputBox = new HBox(10, subjectNameField, addButton);
+	    HBox inputBox = new HBox(10, subjectNameField, addButton, deleteButton);
 	    inputBox.setAlignment(Pos.CENTER);
-	    inputBox.setStyle("-fx-padding: 10;");
+	    inputBox.setPadding(new Insets(10));
+	    
 	    
 	    // Back to Home Page button
 	    Button backButton = new Button("Back to Home Page");
@@ -82,6 +95,13 @@ public class subjectView {
 	    	alert.showAndWait();
 	    }
 	
-	
-	
+	    private boolean showConfirmation(String message) {
+		Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+		confirm.setTitle("Confirm Deletion");
+		confirm.setHeaderText("Please confirm your action");
+		confirm.setContentText(message);
+		
+		//Return true if user clicks OK, false otherwise
+		return confirm.showAndWait().filter(response -> response == ButtonType.OK).isPresent();
+	    }
 }

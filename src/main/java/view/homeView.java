@@ -41,7 +41,7 @@ public class homeView {
 		HBox topBar = new HBox(10, title, spacer, logoutButton);
 		topBar.setPadding(new Insets(15));
 		topBar.setAlignment(Pos.CENTER_LEFT);
-		topBar.setStyle("-fx-background-color: 2e86de;");
+		topBar.setStyle("-fx-background-color: #2e86de;");
 		
 		// Welcome label
 		Label welcome = new Label("Welcome to the Home Page!");
