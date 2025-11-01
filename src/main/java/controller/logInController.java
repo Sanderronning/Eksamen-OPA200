@@ -21,7 +21,7 @@ public class logInController {
 	
 	public logInController() {
 		//midlertidig administrator
-		this.admin = new administrator("1", "Admin", "user", "admin@uni.no", "A1", "admin", "1234");
+		this.admin = new administrator("Admin", "user", "admin@uni.no", "A1", "admin", "1234");
 	}
 	
 	@FXML
