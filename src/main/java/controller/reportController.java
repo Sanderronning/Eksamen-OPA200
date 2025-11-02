@@ -1,3 +1,7 @@
+/**
+ * @author Tonje Andreassen
+ */
+
 package controller;
 
 import java.io.IOException;

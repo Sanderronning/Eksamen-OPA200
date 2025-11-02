@@ -14,7 +14,7 @@ public class reportFileWriter {
 			System.out.println("Comfirmation. The average grade is successfully wrote to the file."); // Success message
 			System.out.println("File location: " + System.getProperty("user.dir") + "/averageGradeReport.txt"); // Print file location
 		} catch (IOException e) {
-			System.out.println("An error occurred while writing to the file."); // The build in funktion that is handeling the exceptions, it is imported as IOException
+			System.out.println("An error occurred while writing to the file."); // The build in function that is handeling the exceptions, it is imported as IOException
 			e.printStackTrace();
 		}
 	}
