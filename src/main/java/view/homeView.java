@@ -35,7 +35,7 @@ public class homeView {
 		
 		// Logout button
 		Button logoutButton = new Button("Log Out");
-		logoutButton.setOnAction(e -> new logInView(stage).show());
+		logoutButton.setOnAction(e -> new logInView(stage).show());  // Navigate to login view
 		
 		// Top bar layout
 		HBox topBar = new HBox(10, title, spacer, logoutButton);
@@ -55,7 +55,7 @@ public class homeView {
         // Subject section
         Button subjectButton = new Button ("Manage Subjects");
         subjectButton.setPrefWidth(200);
-        subjectButton.setOnAction(e -> new subjectView(stage).show());
+        subjectButton.setOnAction(e -> new subjectView(stage).show()); // Navigate to subject view
         
         VBox centerContent = new VBox(20, welcomeLabel, subjectButton);
         centerContent.setAlignment(Pos.CENTER);
