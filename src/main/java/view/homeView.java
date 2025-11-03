@@ -57,7 +57,12 @@ public class homeView {
         subjectButton.setPrefWidth(200);
         subjectButton.setOnAction(e -> new subjectView(stage).show());
         
-        VBox centerContent = new VBox(20, welcomeLabel, subjectButton);
+        // Report section
+        Button reportButton = new Button ("Manage Reports");
+        reportButton.setPrefWidth(200);
+        reportButton.setOnAction(e -> new reportView(stage).show());
+        
+        VBox centerContent = new VBox(20, welcomeLabel, subjectButton, reportButton);
         centerContent.setAlignment(Pos.CENTER);
         
         BorderPane root = new BorderPane();

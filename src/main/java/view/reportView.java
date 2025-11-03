@@ -13,8 +13,11 @@ import javafx.collections.ObservableList;
 
 	public class reportView {
 	
-		private final Stage stage = new Stage();
+		private Stage stage = new Stage();
 
+	public reportView(Stage stage) {
+		this.stage = stage;
+	}
 		
 	public void subjectOption(Stage stage) { //
 		ComboBox<String> subjectComboBox = new ComboBox <>();  // defines a new subject-comboBox
