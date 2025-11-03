@@ -11,18 +11,12 @@ import java.util.*;
 
 public class homeView {
 	private final Stage stage;
-	private final List<String> students = new ArrayList<>();
-	private final List<String> teachers = new ArrayList<>();
-	private final Map<String, Double> reports = new HashMap<>(); // Map for student reports
+	
 	
 	public homeView(Stage stage) {
 		this.stage = stage;
 		
-		// Sample data
-		students.addAll(Arrays.asList("Ola Nordmann", "Kari Nordmann", "Per Hansen"));
-		teachers.addAll(Arrays.asList("Lars Lærer", "Eva Underviser"));
-		reports.put("Average Grade", 5.6);
-		
+	
 	}
 	
 	public void show() {
@@ -35,7 +29,7 @@ public class homeView {
 		
 		// Logout button
 		Button logoutButton = new Button("Log Out");
-		logoutButton.setOnAction(e -> new logInView(stage).show());
+		logoutButton.setOnAction(e -> new logInView(stage).show());  // Navigate to login view
 		
 		// Top bar layout
 		HBox topBar = new HBox(10, title, spacer, logoutButton);
@@ -55,7 +49,7 @@ public class homeView {
         // Subject section
         Button subjectButton = new Button ("Manage Subjects");
         subjectButton.setPrefWidth(200);
-        subjectButton.setOnAction(e -> new subjectView(stage).show());
+        subjectButton.setOnAction(e -> new subjectView(stage).show()); // Navigate to subject view
         
         // Report section
         Button reportButton = new Button ("Manage Reports");

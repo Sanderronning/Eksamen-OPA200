@@ -1,5 +1,6 @@
 package view;
 
+import controller.subjectController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -9,13 +10,13 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import model.subject;
 
 public class subjectView {
 
 	private final Stage stage;
-	private final ObservableList<String> subjects = FXCollections.observableArrayList(
-			"Mathematics", "Physics", "Chemistry", "Biology", "History"
-			);
+	private final subjectController controller = new subjectController(); 
+
 	
 	public subjectView(Stage stage) {
 		this.stage = stage;
@@ -27,36 +28,52 @@ public class subjectView {
 		Label title = new Label("Subjects");	
 		title.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
 		
-		// ListView to display subjects
-		ListView<String> subjectListView = new ListView<>();
+		
+		//ListView 
+		ListView<subject> subjectListView = new ListView<>();
 	    subjectListView.setPrefHeight(350);
-	    subjectListView.setItems(subjects);
+	    subjectListView.setItems(controller.getAllSubjects()); //Get subjects from controller
+		
 	    
+	    subjectListView.setCellFactory(listView -> new ListCell<subject>() {
+            @Override
+            protected void updateItem(subject s, boolean empty) {
+                super.updateItem(s, empty);
+                if (empty || s == null) {
+                    setText(null);
+                } else {
+                    setText(s.getSubjectID() + " - " + s.getSubjectName() + " (" + s.getCredits() + "credits)");
+                }
+             }
+	   });
+                
+                
 	    // Bind the subjects list to the ListView
 	    TextField subjectNameField = new TextField();
 	    subjectNameField.setPromptText("Subject Name");
 	    subjectNameField.setPrefWidth(200);
+	    
 	    
 	    // Add Subject button
 	    Button addButton = new Button("Add Subject");
 	    addButton.setOnAction(e -> {
 	    	String newSubject = subjectNameField.getText().trim();
 	    	if (!newSubject.isEmpty()) {
-	    		subjects.add(newSubject);
-	    		subjectNameField.clear();
+	    		controller.addSubject("S" + (controller.getAllSubjects().size() + 1), newSubject, 7.5); // Default credits to 7.5
 	    	} else {
 	    		showAlert("Please enter a subject name before adding.");
 	    	}
 	    });
 	    
+	    
 	    // Delete Subject button
 	    Button deleteButton = new Button("Delete Selected Subject");
 	    deleteButton.setOnAction(e -> {
-	    	String selectedSubject = subjectListView.getSelectionModel().getSelectedItem();
+	    subject selectedSubject = subjectListView.getSelectionModel().getSelectedItem();
 	    	if (selectedSubject != null) {
 	    		boolean confirmed = showConfirmation("Are you sure you want to delete the subject: " + selectedSubject + "?");
 	    		if (confirmed) {
-	    			subjects.remove(selectedSubject);
+	    			controller.deleteSubject(selectedSubject);
 	    		}
 	    	}
 	    	});
@@ -95,6 +112,7 @@ public class subjectView {
 	    	alert.showAndWait();
 	    }
 	
+	    // Shows confirmation dialog
 	    private boolean showConfirmation(String message) {
 		Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
 		confirm.setTitle("Confirm Deletion");
