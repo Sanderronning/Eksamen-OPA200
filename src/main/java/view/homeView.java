@@ -11,18 +11,12 @@ import java.util.*;
 
 public class homeView {
 	private final Stage stage;
-	private final List<String> students = new ArrayList<>();
-	private final List<String> teachers = new ArrayList<>();
-	private final Map<String, Double> reports = new HashMap<>(); // Map for student reports
+	
 	
 	public homeView(Stage stage) {
 		this.stage = stage;
 		
-		// Sample data
-		students.addAll(Arrays.asList("Ola Nordmann", "Kari Nordmann", "Per Hansen"));
-		teachers.addAll(Arrays.asList("Lars Lærer", "Eva Underviser"));
-		reports.put("Average Grade", 5.6);
-		
+	
 	}
 	
 	public void show() {
