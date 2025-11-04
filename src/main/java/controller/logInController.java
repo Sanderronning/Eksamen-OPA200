@@ -21,7 +21,7 @@ public class logInController {
 	
 	public logInController() {
 		//midlertidig administrator
-		this.admin = new administrator("1", "Admin", "user", "admin@uni.no", "A1", "admin", "1234");
+		this.admin = new administrator("Admin", "user", "admin@uni.no", "A1", "admin", "1234");
 	}
 	
 	@FXML
@@ -41,7 +41,7 @@ public class logInController {
 				FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homePage.fxml"));
 				Parent root = loader.load();
 				Stage stage = (Stage) usernameField.getScene().getWindow();
-				stage.setScene(new Scene (root));
+				stage.setScene(new Scene (root, 800, 600));
 				stage.setTitle("Home Page");
 			} catch (Exception e) {
 				e.printStackTrace();

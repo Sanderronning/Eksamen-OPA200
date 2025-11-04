@@ -1,14 +1,12 @@
 package model;
 
-public abstract class person {
+public abstract class user {
 	
-	protected String personID;
 	protected String firstName;
 	protected String lastName;
 	protected String email;
 	
-	public person(String personID, String firstName, String lastName, String email) {
-		this.personID = personID;
+	public user(String firstName, String lastName, String email) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;

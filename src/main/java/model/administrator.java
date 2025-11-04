@@ -1,14 +1,14 @@
 package model;
 
-public class administrator extends person {
+public class administrator extends user {
 	
 	private String adminID;
 	private String username;
 	private String password;
 
-	public administrator(String personID, String firstName, String lastName, String email, 
+	public administrator(String firstName, String lastName, String email, 
 		String adminID, String username, String password) {
-		super(personID, firstName, lastName, email);
+		super( firstName, lastName, email);
 		this.adminID = adminID;
 		this.username = username;
 		this.password = password;
