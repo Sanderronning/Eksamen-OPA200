@@ -7,20 +7,19 @@ package controller;
 import java.io.IOException;
 import java.nio.file.Path; 
 import java.util.List;
-import utils.Util;
 import util.average;
 import util.reportFileWriter;
 import view.reportView;
 
 public class reportController {
-	private average util ;
-	private reportView view;
-	private reportFileWriter util;
+	private average averageUtil;
+	private reportView reportView;
+	private reportFileWriter reportFileWriter;
 	
-	public reportController(average util, reportView view, reportFileWriter util) {
-		this.util = util;
-		this.view = view;
-		this.util = util;
+	public reportController(average averageUtil, reportView reportView, reportFileWriter reportFileWriter) {
+		this.averageUtil = averageUtil ;
+		this.reportView = reportView;
+		this.reportFileWriter = reportFileWriter;
 	}
 	
 	public String gradeList (double[]grade) { //Here is the list of grades from exam
