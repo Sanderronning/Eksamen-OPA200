@@ -19,6 +19,7 @@ public class reportController {
 		this.reportView = reportView;
 		this.reportFileWriter = reportFileWriter;
 	}
+<<<<<<< Updated upstream
 //<<<<<<< Updated upstream
 
 
@@ -26,4 +27,7 @@ public class reportController {
 //=======
 	//123r4
 //>>>>>>> Stashed changes
+=======
+	//123r4
+>>>>>>> Stashed changes
 }
