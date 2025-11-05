@@ -19,5 +19,3 @@ public class reportController {
 		this.reportView = reportView;
 		this.reportFileWriter = reportFileWriter;
 	}
-	
-}
