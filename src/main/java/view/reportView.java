@@ -8,18 +8,19 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import util.average;
 import java.util.*;
+
+import controller.subjectController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 
 	public class reportView {
 	
-		private Stage stage = new Stage();
+	private Stage stage = new Stage();
 
 	public reportView(Stage stage) {
 		this.stage = stage;
 	}
-	
 	
 	public void show() {
 		// Title label

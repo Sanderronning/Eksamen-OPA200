@@ -9,11 +9,28 @@ import java.nio.file.Path;
 import java.util.List;
 import util.average;
 import util.reportFileWriter;
+import view.reportView;
 
 public class reportController {
+	private average util;
+	private reportView view;
+	
+	public reportController(average util, reportView view) {
+		this.util = util;
+		this.view = view;
+	}
 	
 	public String gradeList (double[]grade) { //Here is the list of grades from exam
-    double averageGrade = average.calculateAverage(grade); //gets the calculation from the util class average. Where the average calculation is done.The report controller gets the average grade.
+    
+	public double calculateAverageController(double[] grade) {
+	double[] grades = calculateAverage(grade);
+	return calculateAverageController(grade)
+			
+			{	
+		
+	
+	
+//gets the calculation from the util class average. Where the average calculation is done.The report controller gets the average grade.
     try {
     	reportFileWriter.FileWriter(Path.of("averageGradeReport.txt"), grade); // have to find out if it is grade or averageGrade that is going to be here
     } catch (IOException e) { // e is instance/variable of the IOException, that is a build in class in java
