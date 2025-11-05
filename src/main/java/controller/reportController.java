@@ -1,9 +1,8 @@
 /**
- * @author Tonje Andreassen.
+ * @author Tonje Andreassen
  */
 
 package controller;
-
 
 import util.average;
 import util.reportFileWriter;
@@ -18,4 +17,4 @@ public class reportController {
 		this.averageUtil = averageUtil ;
 		this.reportView = reportView;
 		this.reportFileWriter = reportFileWriter;
-	}
+	}}
