@@ -3,6 +3,7 @@ package controller;
 import model.subject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import view.subjectView; 
 
 public class subjectController {
 	
