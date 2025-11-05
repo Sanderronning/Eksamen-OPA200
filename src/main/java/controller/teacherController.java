@@ -3,8 +3,8 @@ packeg controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
-import dao.TeacherDAO;
-import model.Teacher;
+import dao.teacherDao;
+import model.teacher;
 
 public class teacherController{
 	@FXML private TextField nameField;
