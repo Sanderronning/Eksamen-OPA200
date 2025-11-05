@@ -1,5 +1,5 @@
 /**
- * @author Tonje Andreassen
+ * @author Tonje Andreassen.
  */
 
 package controller;
