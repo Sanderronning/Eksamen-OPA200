@@ -1,7 +1,6 @@
 package dao;
 import java.sql.*;
 import model.teacher;
-
 public class teacherDao {
 
     private final String URL = "jdbc:mysql://localhost:3306/university";

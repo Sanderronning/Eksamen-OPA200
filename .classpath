@@ -38,6 +38,16 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
+	<classpathentry kind="lib" path="/Users/raheleh/Downloads/javafx-sdk-21.0.9/lib/javafx.controls.jar"/>
+	<classpathentry kind="lib" path="/Users/raheleh/Downloads/javafx-sdk-21.0.9/lib/javafx.base.jar"/>
+	<classpathentry kind="lib" path="/Users/raheleh/Downloads/javafx-sdk-21.0.9/lib/javafx-swt.jar"/>
+	<classpathentry kind="lib" path="/Users/raheleh/Downloads/javafx-sdk-21.0.9/lib/javafx.fxml.jar"/>
+	<classpathentry kind="lib" path="/Users/raheleh/Downloads/javafx-sdk-21.0.9/lib/javafx.graphics.jar"/>
+	<classpathentry kind="lib" path="/Users/raheleh/Downloads/javafx-sdk-21.0.9/lib/javafx.media.jar"/>
+	<classpathentry kind="lib" path="/Users/raheleh/Downloads/javafx-sdk-21.0.9/lib/javafx.swing.jar"/>
+	<classpathentry kind="lib" path="/Users/raheleh/Downloads/javafx-sdk-21.0.9/lib/javafx.web.jar"/>
+=======
 	<classpathentry kind="lib" path="/Users/sanderronning/Desktop/JavaFX/javafx-sdk-21.0.9/lib/javafx.base.jar"/>
 	<classpathentry kind="lib" path="/Users/sanderronning/Desktop/JavaFX/javafx-sdk-21.0.9/lib/javafx.controls.jar"/>
 	<classpathentry kind="lib" path="/Users/sanderronning/Desktop/JavaFX/javafx-sdk-21.0.9/lib/javafx.web.jar"/>
@@ -46,5 +56,6 @@
 	<classpathentry kind="lib" path="/Users/sanderronning/Desktop/JavaFX/javafx-sdk-21.0.9/lib/javafx.media.jar"/>
 	<classpathentry kind="lib" path="/Users/sanderronning/Desktop/JavaFX/javafx-sdk-21.0.9/lib/javafx-swt.jar"/>
 	<classpathentry kind="lib" path="/Users/sanderronning/Desktop/JavaFX/javafx-sdk-21.0.9/lib/javafx.fxml.jar"/>
+>>>>>>> 13369910d1601aafde8e3cf9138f18829ecc2d1c
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
