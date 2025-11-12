@@ -4,8 +4,8 @@ import model.teacher;
 public class teacherDao {
 
     private final String URL = "jdbc:mysql://localhost:3306/university";
-    private final String USER = "root"; // MySQL username
-    private final String PASSWORD = ""; // MySQL password (empty for XAMPP default)
+    private final String USER = "root";
+    private final String PASSWORD = ""; 
 
     private Connection connect() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
